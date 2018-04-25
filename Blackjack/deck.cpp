@@ -1,33 +1,21 @@
 #include "deck.h" 
 #include <time.h> 
 Deck::Deck() {
-	    // create deck of cards
-	    // So....4 cards for all values - 13 (values and face)
-	    // two colors
     topCard = 0; 
     int val = 1; 
     for(int i=0; i<52; i+=4) {
-//		if(i%4 == 0) {
         cards[i].face = "Hearts"; 
 	cards[i].isBlack = false; // if not black, it's red 
 	cards[i].value = val; 
-//		}
-//		else if(i%4 == 1) { 
 	cards[i+1].face = "Spades"; 
 	cards[i+1].value = val; 
 	cards[i+1].isBlack = true; 	
-//		}
-//		else if(i%4 == 2){
 	cards[i+2].face = "Clubs"; 
 	cards[i+2].value = val; 
 	cards[i+2].isBlack = true; 
-//		}
-//		else if(i%4 == 3) { 
 	cards[i+3].face = "Diamonds";
 	cards[i+3].value = val; 
 	cards[i+3].isBlack = false; 		
-//		} 
-//	    }
 	string cardType = ""; 
 	if(i == 0) 
 	    cardType = "Ace"; 
