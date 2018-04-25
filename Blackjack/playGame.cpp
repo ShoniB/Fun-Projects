@@ -10,7 +10,7 @@ int main()
     cout << "How much money do you have?\n"; 
     int money = 0; 
     cin >> money; 
-    while(cin.fail()) {
+    while(cin.fail() || money < 0) {
 	cout << "Invalid value. Enter a new amount:\n"; 
 	cin.clear(); 
 	cin.ignore(9999, '\n'); 
